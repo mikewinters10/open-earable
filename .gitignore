@@ -36,3 +36,34 @@
 
 # Macbook
 **/.DS_Store
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+.env
+venv/
+*.log
+
+# IDE settings
+.idea/
+.vscode/
+
+# Compiled Python files
+*.pyc
+
+# Dependency directories
+env/
+lib/
+bin/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual Environments
+.venv/

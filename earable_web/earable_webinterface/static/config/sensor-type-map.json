@@ -21,5 +21,11 @@
     "name": "TEMP",
     "type": 1,
     "type-name": "single_float"
+  },
+
+  "4": {
+    "name": "MAG",
+    "type": 0,
+    "type-name": "xyz"
   }
 }

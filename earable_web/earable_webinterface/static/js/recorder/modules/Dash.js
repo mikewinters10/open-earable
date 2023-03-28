@@ -22,7 +22,7 @@ export class Dash {
 
     set_default() {
         document.getElementById('sensorId').value = '0';
-        document.getElementById('rate').value = '0';
+        document.getElementById('rate').value = '100';
         document.getElementById('latency').value = '0';
     }
 
@@ -127,6 +127,19 @@ class Dashboard {
             parsedValue += elem["type"] + ": " + elem["value"] + " ";
         });
         parsedValue += " Time: " + packet["time"];
+
+        // Send the values to the Flask server:
+        fetch('/log', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                sensor: sensor,
+                name: parsedName,
+                value: parsedValue
+            })
+        });
 
         var table = document.getElementById("dataTable");
         // If sensor is already in the table -> update its value

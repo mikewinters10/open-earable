@@ -15,14 +15,16 @@ var SENS_test = [
     [0, 1],
     [1, 1],
     [2, 1],
-    [3, 1]
+    [3, 1],
+    [4, 1]
 ]
 
 var SENS_operation = [
     [0, 6],                // Accelerometer corrected
     [1, 6],                // Gyroscope corrected
     [2, 6],                // Barometer
-    [3, 6]                 // Temperature
+    [3, 6],                 // Temperature
+    [4, 6]                // Magnetometer corrected
 ]
 
 var SENS_none = []

@@ -196,6 +196,7 @@ export class Board_Interface {
 
         data.forEach(point => {
             result += point.type + ": " + point.value + "   ";
+            console.log(result)
         });
         return result;
     }

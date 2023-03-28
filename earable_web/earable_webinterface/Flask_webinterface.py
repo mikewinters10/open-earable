@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template #, request
 
 host = "localhost"
 port = 5002
@@ -18,5 +18,11 @@ def dashboard():
 def recorder():
     return render_template("recorder.html")
 
+@app.route('/log', methods=['POST'])
+def log():
+    data = request.get_json()
+    print(data)
+    return ''
+
 if __name__ == '__main__':
-    app.run(host=host, port=port, debug=False)
+    app.run(host=host, port=port, debug=True)
