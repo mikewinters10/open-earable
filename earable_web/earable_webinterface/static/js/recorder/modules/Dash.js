@@ -128,6 +128,13 @@ class Dashboard {
         });
         parsedValue += " Time: " + packet["time"];
 
+        // Create an array of random numbers
+        let arr = [];
+            for (let i = 0; i < 11; i++) {
+            arr.push(Math.random());
+        }
+        outlet.push_sample(arr)
+
         // Send the values to the Flask server:
         fetch('/log', {
             method: 'POST',
